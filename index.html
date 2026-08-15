@@ -1,23 +1,1400 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+  <!-- Schema.org JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FinancialService",
+        "@id": "https://insu.reliabledone.com/#organization",
+        "name": "사회초년생 맞춤형 보험 비교 컨설팅 센터",
+        "url": "https://insu.reliabledone.com",
+        "logo": "https://insu.reliabledone.com/assets/logo.png",
+        "description": "20대 및 30대 사회초년생을 위한 비갱신형 건강보험, 실손의료보험, 3대 진단비 종합 비교 분석 전문 플랫폼",
+        "areaServed": [
+          {"@type": "AdministrativeArea", "name": "전국"},
+          {"@type": "AdministrativeArea", "name": "서울특별시"},
+          {"@type": "AdministrativeArea", "name": "경기도"},
+          {"@type": "AdministrativeArea", "name": "인천광역시"},
+          {"@type": "AdministrativeArea", "name": "부산광역시"},
+          {"@type": "AdministrativeArea", "name": "대구광역시"},
+          {"@type": "AdministrativeArea", "name": "대전광역시"},
+          {"@type": "AdministrativeArea", "name": "광주광역시"},
+          {"@type": "AdministrativeArea", "name": "울산광역시"},
+          {"@type": "AdministrativeArea", "name": "세종특별자치시"}
+        ],
+        "serviceType": "사회초년생 건강보험 비교, 실손의료비 견적, 3대 질병 진단비 컨설팅, 운전자보험 상담"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://insu.reliabledone.com/young-insurance-guide#article",
+        "isPartOf": {
+          "@type": "WebPage",
+          "@id": "https://insu.reliabledone.com/young-insurance-guide"
+        },
+        "headline": "2026년 기준 사회초년생 보험 가입 순위 및 적정 보험료 산출 종합 가이드",
+        "description": "월 소득 대비 적정 보험료 비율, 필수 4대 보장 자산(실비, 암, 뇌혈관, 심장질환 진단비), 갱신형과 비갱신형의 장단점 비교 및 다이렉트 설계법 완벽 정리",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-01-05T09:00:00+09:00",
+        "dateModified": "2026-02-15T14:30:00+09:00",
+        "author": {
+          "@type": "Organization",
+          "name": "금융보험 리서치팀"
+        },
+        "publisher": {
+          "@id": "https://insu.reliabledone.com/#organization"
+        },
+        "mainEntityOfPage": "https://insu.reliabledone.com/young-insurance-guide"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://insu.reliabledone.com/young-insurance-guide#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "사회초년생에게 가장 적합한 월 보험료는 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "사회초년생의 적정 월 보험료는 세후 월 소득의 약 5퍼센트에서 8퍼센트 이내가 가장 이상적입니다. 예를 들어 월 실령액이 250만 원인 경우 약 12만 원에서 18만 원 수준으로 실손의료보험과 3대 진단비(암, 뇌혈관, 허혈성) 비갱신형 종합보험을 구성하는 것이 장기 유지에 안전합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "종신보험을 저축이나 연금 목적으로 가입해도 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "사회초년생에게 종신보험을 저축성 또는 재테크 상품으로 권유하는 것은 적합하지 않습니다. 종신보험은 사망 보장을 주 목적으로 하므로 사업비 차감 비중이 매우 높아 중도 해지 시 원금 손실 위험이 큽니다. 질병과 상해를 보장하는 순수보장형 건강보험을 우선 준비해야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "갱신형과 비갱신형 무해지환급형 중 어떤 것이 유리한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "20대와 30대 사회초년생은 경제활동 기간 동안 납입을 마치고 노후까지 보장을 유지할 수 있는 20년납 90세만기 비갱신형 무해지(해약환급금 미지급형) 상품이 총 납입 비용 면에서 훨씬 저렴하고 안정적입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --secondary: #0f766e;
+      --secondary-light: #f0fdfa;
+      --accent: #d97706;
+      --accent-light: #fffbeb;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --text-sub: #64748b;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-focus: #93c5fd;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.03);
+      --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.07), 0 8px 10px -6px rgba(0,0,0,0.04);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+      line-height: 1.85;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 상단 탑바 */
+    .top-announcement {
+      background-color: #0f172a;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+    .top-announcement strong {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    /* 헤더 */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0f766e 100%);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #f8fafc;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      backdrop-filter: blur(4px);
+    }
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    /* 네비게이션 */
+    nav {
+      background-color: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      padding: 0.85rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.35rem 0.6rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+    nav a:hover {
+      color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    /* 레이아웃 */
+    .container {
+      max-width: 1140px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem;
+    }
+
+    /* 메인 콘텐츠 카드 */
+    main {
+      background-color: transparent;
+    }
+
+    section {
+      background-color: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* 타이포그래피 계층 */
+    h2 {
+      font-size: 1.75rem;
+      color: var(--text-main);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 2px solid var(--border-color);
+      letter-spacing: -0.015em;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 70px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      color: var(--secondary);
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.9;
+    }
+
+    /* AI 및 스니펫 최적화 직관형 답변 박스 */
+    .snippet-box {
+      background: linear-gradient(to right, #eff6ff, #f0fdfa);
+      border-left: 5px solid var(--primary);
+      border-top: 1px solid #dbeafe;
+      border-right: 1px solid #dbeafe;
+      border-bottom: 1px solid #dbeafe;
+      padding: 1.5rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.75rem 0;
+    }
+    .snippet-box-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+    .snippet-box p {
+      margin-bottom: 0.5rem;
+      color: #334155;
+    }
+    .snippet-box ul {
+      margin: 0.5rem 0 0 1.25rem;
+      color: #334155;
+    }
+    .snippet-box li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* 인포 박스 */
+    .info-card {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .info-card-warning {
+      background-color: var(--accent-light);
+      border-color: #fde68a;
+    }
+    .info-card-warning h4 {
+      color: #92400e;
+    }
+    .info-card-warning p {
+      color: #78350f;
+    }
+
+    /* 그리드 시스템 */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 1.75rem 0;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.75rem 0;
+    }
+    .card-item {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .card-item h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    /* 테이블 스타일링 */
+    .table-container {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 650px;
+    }
+    th, td {
+      padding: 1rem 1.15rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: -0.01em;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background-color: #fcfdfe;
+    }
+    td.highlight {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    td.price-cell {
+      font-weight: 700;
+      color: var(--secondary);
+      font-feature-settings: "tnum";
+    }
+
+    /* 시각화 CSS 차트 */
+    .chart-container {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      margin: 2rem 0;
+    }
+    .chart-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+    .bar-chart-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .bar-chart-label {
+      width: 130px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .bar-chart-track {
+      flex: 1;
+      background: #e2e8f0;
+      height: 24px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 0 1rem;
+      position: relative;
+    }
+    .bar-chart-fill {
+      height: 100%;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0.6rem;
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .fill-blue { background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
+    .fill-teal { background: linear-gradient(90deg, #14b8a6, #0f766e); }
+    .fill-amber { background: linear-gradient(90deg, #f59e0b, #d97706); }
+    .fill-purple { background: linear-gradient(90deg, #a855f7, #7e22ce); }
+    .bar-chart-value {
+      width: 80px;
+      text-align: right;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* 키워드 태그 클라우드 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .tag-item {
+      background-color: #f1f5f9;
+      color: #475569;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .tag-item:hover {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border-color: #bfdbfe;
+    }
+
+    /* 계산기 위젯 인터페이스 */
+    .calculator-box {
+      background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+    }
+    .calculator-box h3 {
+      margin-top: 0;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .calc-form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .calc-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .calc-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #334155;
+    }
+    .calc-group select, .calc-group input {
+      padding: 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      background: #ffffff;
+      color: #1e293b;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .calc-group select:focus, .calc-group input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.15);
+    }
+    .calc-btn {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .calc-btn:hover {
+      background: var(--primary-hover);
+    }
+    .calc-result-display {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: #eff6ff;
+      border-radius: var(--radius-md);
+      border: 1px solid #bfdbfe;
+      display: none;
+    }
+    .calc-result-display.active {
+      display: block;
+    }
+    .calc-result-title {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .calc-result-values {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .calc-res-item {
+      flex: 1;
+      min-width: 140px;
+    }
+    .calc-res-item .label {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .calc-res-item .val {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--secondary);
+      margin-top: 0.2rem;
+    }
+
+    /* FAQ 아코디언 */
+    .faq-wrapper {
+      margin: 1.5rem 0;
+    }
+    .faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      margin-bottom: 0.75rem;
+      background: #ffffff;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item:focus-within {
+      border-color: var(--primary);
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      padding: 1.25rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
+    .faq-question:hover {
+      background-color: #f8fafc;
+      color: var(--primary);
+    }
+    .faq-question .indicator {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #94a3b8;
+      transition: transform 0.2s ease;
+    }
+    .faq-item.open .faq-question .indicator {
+      transform: rotate(45deg);
+      color: var(--primary);
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.85;
+      display: none;
+      border-top: 1px solid #f1f5f9;
+      background: #fafafa;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* 공식 참조 사이트 링크 박스 */
+    .reference-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .ref-link-list {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+    .ref-link-list li {
+      margin-bottom: 0.6rem;
+    }
+    .ref-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      border-bottom: 1px dotted var(--primary);
+    }
+    .ref-link:hover {
+      color: var(--primary-hover);
+      border-bottom-style: solid;
+    }
+
+    /* CTA 컨설팅 접수 폼 */
+    .consulting-section {
+      background: linear-gradient(135deg, #1e3a8a, #0f766e);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .consulting-section h3 {
+      color: #ffffff;
+      font-size: 1.8rem;
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .consulting-section p {
+      color: #e2e8f0;
+      max-width: 650px;
+      margin: 0 auto 2rem;
+    }
+    .consult-form {
+      max-width: 580px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      text-align: left;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-row {
+      margin-bottom: 1.2rem;
+    }
+    .form-row label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: #334155;
+    }
+    .form-row input, .form-row select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+    .form-submit-btn {
+      width: 100%;
+      background: #e65c00;
+      color: #ffffff;
+      border: none;
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 1.1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit-btn:hover {
+      background: #cc5200;
+    }
+
+    /* 푸터 */
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 3rem 1.5rem;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      text-align: center;
+      margin-top: 4rem;
+      border-top: 1px solid #1e293b;
+    }
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-links {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      section {
+        padding: 1.75rem 1.25rem;
+      }
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .bar-chart-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .bar-chart-track {
+        width: 100%;
+        margin: 0.4rem 0;
+      }
+      .bar-chart-value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 공지 바 -->
+  <div class="top-announcement">
+    <strong>2026년 보험제도 개정 반영</strong> 실손의료보험 가이드라인 및 청년층 비갱신형 종합보험 분석 완료
+  </div>
+
+  <!-- 메인 헤더 -->
+  <header>
+    <div class="header-badge">사회초년생 금융독립 솔루션 2026</div>
+    <h1>사회초년생 보험 가입 비교견적 및 필수 보장 가이드</h1>
+    <p>첫 월급으로 지키는 든든한 미래 자산. 20대와 30대 신규 취업자를 위한 실비, 3대 질병 진단비, 비갱신형 무해지환급형 최적 설계 방안을 객관적으로 분석합니다.</p>
+  </header>
+
+  <!-- 메인 내비게이션 -->
+  <nav aria-label="주요 목차 탐색">
+    <ul>
+      <li><a href="#개요">필수 개념 및 적정 보험료</a></li>
+      <li><a href="#우선순위">4대 핵심 보장자산</a></li>
+      <li><a href="#요금비교">연령별 견적 및 요금표</a></li>
+      <li><a href="#지역트렌드">전국 지역별 가입 통계</a></li>
+      <li><a href="#채널분석">보험사 및 가입채널 비교</a></li>
+      <li><a href="#커뮤니티후기">실제 후기 및 유의사항</a></li>
+      <li><a href="#계산기">모의 보험료 계산기</a></li>
+      <li><a href="#자주묻는질문">자주 묻는 질문</a></li>
+      <li><a href="#견적상담">맞춤 컨설팅</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
     <main>
-      <h1>Home page</h1>
+
+      <!-- 1. 핵심 개념 & 스니펫 최적화 단락 -->
+      <section id="개요">
+        <h2>사회초년생 보험이란 무엇이며 왜 첫 단추가 중요한가</h2>
+        <p>사회초년생 보험이란 학교를 졸업하고 만 19세부터 만 34세 사이에 첫 취업이나 사회 진출을 이룬 청년층(20대 초반, 20대 중반, 20대 후반, 30대 초반)이 경제적 자립을 시작하면서 가장 먼저 준비해야 하는 위험관리 금융상품을 총칭합니다. 이제 막 급여를 수령하기 시작한 직장인은 자산 형성 초기 단계에 있으므로 갑작스러운 중대 질병이나 예기치 못한 상해 사고가 발생했을 때 모아둔 종잣돈이 급격히 소진될 위험이 큽니다. 따라서 효율적인 지출 계획 아래 꼭 필요한 보장만을 압축하여 가입하는 것이 금융 기초의 핵심입니다.</p>
+
+        <!-- Featured Snippet 최적화 블록 -->
+        <div class="snippet-box">
+          <div class="snippet-box-title">요약 브리핑: 사회초년생 보험 가입의 핵심 3대 원칙</div>
+          <p>AI 검색 및 금융감독 전문가들이 공통으로 권장하는 2026년 기준 사회초년생의 최적 포트폴리오 가이드라인입니다.</p>
+          <ul>
+            <li><strong>지출 한도:</strong> 세후 월 소득의 5퍼센트에서 8퍼센트 이내로 설정 (월 급여 250만 원 기준 약 12만 원~17만 원).</li>
+            <li><strong>우선순위:</strong> 1순위 4세대 또는 개정 5세대 실손의료보험, 2순위 3대 질병(암, 뇌혈관질환, 허혈성 심장질환) 비갱신형 진단비, 3순위 수술비 및 일상생활배상책임.</li>
+            <li><strong>상품 형태:</strong> 20년납 90세만기 비갱신형 무해지환급형 설계를 선택하여 납입 총액을 20퍼센트 이상 절감하고 물가상승 위험을 방어.</li>
+          </ul>
+        </div>
+
+        <h3>월 소득 대비 적정 보험료 예산 배분 가이드</h3>
+        <p>보험료는 한 번 가입하면 통상 20년 동안 매달 고정적으로 지출되는 금융 비용입니다. 보장이 아무리 화려해도 본인의 소득 수준에 맞지 않는 과도한 금액을 책정하면 중도 해지로 이어져 막대한 원금 손실을 초래하게 됩니다. 아래의 표준 가이드라인을 참고하여 본인의 월 급여에 맞는 예산을 계산해 보시기 바랍니다.</p>
+
+        <!-- CSS 막대 그래프 -->
+        <div class="chart-container">
+          <div class="chart-title">월 급여 구간별 추천 적정 월 보험료 범위 (2026년 기준 단위: 원)</div>
+          <div class="bar-chart-row">
+            <div class="bar-chart-label">월 소득 200만 원</div>
+            <div class="bar-chart-track">
+              <div class="bar-chart-fill fill-blue" style="width: 50%;">10만~13만 원</div>
+            </div>
+            <div class="bar-chart-value">약 6%</div>
+          </div>
+          <div class="bar-chart-row">
+            <div class="bar-chart-label">월 소득 250만 원</div>
+            <div class="bar-chart-track">
+              <div class="bar-chart-fill fill-teal" style="width: 65%;">13만~17만 원</div>
+            </div>
+            <div class="bar-chart-value">약 6.5%</div>
+          </div>
+          <div class="bar-chart-row">
+            <div class="bar-chart-label">월 소득 300만 원</div>
+            <div class="bar-chart-track">
+              <div class="bar-chart-fill fill-amber" style="width: 78%;">16만~21만 원</div>
+            </div>
+            <div class="bar-chart-value">약 6.8%</div>
+          </div>
+          <div class="bar-chart-row">
+            <div class="bar-chart-label">월 소득 350만 원 이상</div>
+            <div class="bar-chart-track">
+              <div class="bar-chart-fill fill-purple" style="width: 90%;">20만~25만 원</div>
+            </div>
+            <div class="bar-chart-value">약 7.0%</div>
+          </div>
+        </div>
+
+        <div class="tag-cloud">
+          <span class="tag-item">사회초년생보험</span>
+          <span class="tag-item">20대보험추천</span>
+          <span class="tag-item">30대초반보험료</span>
+          <span class="tag-item">월급관리비율</span>
+          <span class="tag-item">적정보험료계산</span>
+          <span class="tag-item">다이렉트건강보험</span>
+        </div>
+      </section>
+
+      <!-- 2. 우선순위 로드맵 및 4대 핵심 보장자산 -->
+      <section id="우선순위">
+        <h2>사회초년생이 반드시 챙겨야 할 4대 핵심 보장자산</h2>
+        <p>복잡한 특약 이름에 혼란스러워할 필요가 없습니다. 보험의 본질은 발생 확률은 낮지만 일어났을 때 가계 재정을 파탄으로 몰고 가는 치명적인 의료비 지출을 방어하는 것입니다. 금융 컨설팅 전문가들이 입을 모아 권하는 4단계 우선순위 로드맵을 체계적으로 안내합니다.</p>
+
+        <div class="grid-2">
+          <div class="card-item">
+            <h4>제1단계: 실손의료보험 (기초 방어막)</h4>
+            <p>실제 병원 및 약국에서 지출한 급여 및 비급여 의료비의 70퍼센트에서 80퍼센트를 돌려받는 제2의 국민건강보험입니다. 2026년 기준 실손보험은 1년 갱신형 구조로 전 보험사 동일 표준약관을 적용받으므로, 불필요한 적립보험료 없이 순수보장형으로 단독 가입하는 것이 가장 저렴합니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>제2단계: 3대 질병 진단비 (핵심 자산)</h4>
+            <p>한국인 사망 및 장기 투병 원인 1, 2, 3위인 암, 뇌혈관질환, 심장질환에 대한 일시금 지급 담보입니다. 치료비뿐만 아니라 요양 기간 동안의 소득 공백을 메우기 위해 일반암 5,000만 원, 유사암 1,000만 원, 뇌혈관 및 허혈성 심혈관 진단비 각 2,000만 원 선으로 구성하는 것이 정석입니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>제3단계: 질병 및 상해 수술비 특약</h4>
+            <p>진단비는 최초 1회만 지급되고 소멸하지만, 수술비는 질병이나 사고로 수술을 받을 때마다 매회 반복 지급되는 장점이 있습니다. 1종부터 5종까지 분류되는 종수술비와 다빈도 주요 질환 수술비를 함께 구성하면 든든한 다회성 보장 체계가 완성됩니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>제4단계: 일상생활배상책임 및 운전자보험</h4>
+            <p>타인에게 신체적 상해를 입히거나 재물 손괴를 입혔을 때 최대 1억 원 한도로 실손 보상하는 일상생활배상책임(일배책)은 월 몇백 원 수준으로 최고의 가성비를 자랑합니다. 만약 차량을 직접 운전한다면 형사적 책임을 방어하는 운전자보험을 별도 추가합니다.</p>
+          </div>
+        </div>
+
+        <h3>3대 질병 보장 범위의 결정적 차이점 분석</h3>
+        <p>같은 암보험이나 뇌질환 보험이라도 약관상 보장 범위의 정의에 따라 실제 보험금 지급 여부가 갈립니다. 보장 범위가 좁은 상품에 가입하면 중대한 질환을 진단받고도 단 한 푼의 지원금도 받지 못하는 불상사가 생길 수 있으므로 아래의 포함 범위를 반드시 점검해야 합니다.</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>보장 구분</th>
+                <th>가장 넓은 범위 (추천)</th>
+                <th>중간 범위</th>
+                <th>가장 좁은 범위 (비추천)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>뇌 질환 담보</strong></td>
+                <td class="highlight">뇌혈관질환 진단비 (100% 보장: 뇌경색, 뇌출혈, 뇌동맥류 등 전체)</td>
+                <td>뇌졸중 진단비 (뇌경색, 뇌출혈 한정)</td>
+                <td>뇌출혈 진단비 (전체 뇌혈관 질환 중 9%만 보장)</td>
+              </tr>
+              <tr>
+                <td><strong>심장 질환 담보</strong></td>
+                <td class="highlight">심혈관질환 / 허혈성심장질환 (부정맥, 협심증, 심근경색 전체)</td>
+                <td>허혈성심장질환 (협심증, 심근경색)</td>
+                <td>급성심근경색증 진단비 (협심증 등 초기 질환 미보장)</td>
+              </tr>
+              <tr>
+                <td><strong>암 질환 담보</strong></td>
+                <td class="highlight">일반암 (위, 폐, 간, 대장점막내암, 유방, 자궁, 전립선 전액 보장)</td>
+                <td>소액암 분리형 (생식기암 50% 감액)</td>
+                <td>중대한 암(CI) 한정 지급</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-card info-card-warning">
+          <h4>주의사항: 사회초년생이 절대 피해야 할 보험 가입 함정</h4>
+          <p>지인의 추천이나 무분별한 텔레마케팅으로 인해 종신보험을 마치 고금리 저축이나 목돈 만들기 적금 통장처럼 설명받아 가입하는 사례가 빈번합니다. 종신보험은 가입자가 사망했을 때 유족에게 남겨주는 사망보험금이 주계약이므로 막대한 사업비가 차감되어 10년을 납입해도 원금에 미치지 못합니다. 미혼의 20대와 30대 사회초년생에게는 순수보장형 건강보험이 우선입니다.</p>
+        </div>
+      </section>
+
+      <!-- 3. 연령별/성별 정밀 견적 및 요금표 -->
+      <section id="요금비교">
+        <h2>2026년 기준 연령별 평균 보험료 견적 및 상품 비교표</h2>
+        <p>사회초년생을 위한 표준 설계 기준(일반암 5,000만 원, 유사암 1,000만 원, 뇌혈관 2,000만 원, 허혈성 심장 2,000만 원, 질병종수술비, 20년납 90세만기 비갱신형 무해지환급형)으로 산출한 통상적인 예상 월 납입 금액입니다. 연령대(20대 초반, 20대 중반, 20대 후반, 30대 초반) 및 성별에 따라 손해보험사 상위 5개 사의 평균 가격을 정밀 분석하였습니다.</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>가입 연령대 및 대표 나이</th>
+                <th>단독 실손의료보험 (1년 갱신)</th>
+                <th>3대 진단비 종합보험 (남성)</th>
+                <th>3대 진단비 종합보험 (여성)</th>
+                <th>합산 예상 월 납입 총액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>20대 초반 (만 20세 ~ 23세)</strong></td>
+                <td class="price-cell">8,000원 ~ 10,500원</td>
+                <td class="price-cell">62,000원 ~ 73,000원</td>
+                <td class="price-cell">54,000원 ~ 63,000원</td>
+                <td class="highlight">약 6.5만 ~ 8.3만 원</td>
+              </tr>
+              <tr>
+                <td><strong>20대 중반 (만 24세 ~ 26세)</strong></td>
+                <td class="price-cell">9,500원 ~ 12,000원</td>
+                <td class="price-cell">71,000원 ~ 82,000원</td>
+                <td class="price-cell">61,000원 ~ 71,000원</td>
+                <td class="highlight">약 7.2만 ~ 9.4만 원</td>
+              </tr>
+              <tr>
+                <td><strong>20대 후반 (만 27세 ~ 29세)</strong></td>
+                <td class="price-cell">11,000원 ~ 14,000원</td>
+                <td class="price-cell">83,000원 ~ 96,000원</td>
+                <td class="price-cell">72,000원 ~ 84,000원</td>
+                <td class="highlight">약 8.5만 ~ 11.0만 원</td>
+              </tr>
+              <tr>
+                <td><strong>30대 초반 (만 30세 ~ 32세)</strong></td>
+                <td class="price-cell">13,000원 ~ 16,500원</td>
+                <td class="price-cell">98,000원 ~ 114,000원</td>
+                <td class="price-cell">85,000원 ~ 99,000원</td>
+                <td class="highlight">약 10.0만 ~ 13.0만 원</td>
+              </tr>
+              <tr>
+                <td><strong>30대 중반 (만 33세 ~ 35세)</strong></td>
+                <td class="price-cell">15,000원 ~ 19,000원</td>
+                <td class="price-cell">115,000원 ~ 135,000원</td>
+                <td class="price-cell">99,000원 ~ 118,000원</td>
+                <td class="highlight">약 11.5만 ~ 15.4만 원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>가입 유형별 장단점 및 총 납입 비용 시뮬레이션</h3>
+        <p>보험료를 지불하는 방식에는 크게 <strong>비갱신형 무해지환급형</strong>, <strong>일반 표준형</strong>, 그리고 <strong>갱신형</strong>이 있습니다. 2030 사회초년생의 생애 주기와 재무 구조를 고려했을 때 어떤 방식이 가장 저렴하고 안정적인지 비교해 드립니다.</p>
+
+        <div class="grid-3">
+          <div class="card-item">
+            <h4>비갱신형 무해지환급형</h4>
+            <p><strong>장점:</strong> 20년 동안 보험료 인상이 전혀 없으며, 표준형 대비 월 납입금이 20~30% 저렴함.<br>
+            <strong>단점:</strong> 납입 기간 중 해지 시 환급금이 0원임.<br>
+            <strong>추천도:</strong> 매우 높음 (사회초년생 맞춤형 1순위)</p>
+          </div>
+          <div class="card-item">
+            <h4>일반 표준형 (유해지)</h4>
+            <p><strong>장점:</strong> 납입 중도 해지 시에도 일정 수준의 해약환급금이 지급됨.<br>
+            <strong>단점:</strong> 무해지형보다 월 보험료가 약 30%가량 비싸 장기 납입 부담 증가.<br>
+            <strong>추천도:</strong> 보통 (가계 유지력 불안정 시 검토)</p>
+          </div>
+          <div class="card-item">
+            <h4>주기별 갱신형 (3년/10년/20년)</h4>
+            <p><strong>장점:</strong> 초기 월 납입 요금이 매우 저렴하여 단기 보장에 유리.<br>
+            <strong>단점:</strong> 갱신 시마다 나이와 위험률 증가로 보험료가 폭등하며 평생 납입해야 함.<br>
+            <strong>추천도:</strong> 낮음 (은퇴 후 보험료 폭탄 위험)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 전국 주요 지역별 사회초년생 가입 트렌드 -->
+      <section id="지역트렌드">
+        <h2>전국 17개 시도별 사회초년생 가입 성향 및 지역별 분석</h2>
+        <p>거주 지역과 주요 산업군, 생활 물가 수준에 따라 20대와 30대 직장인들의 보험 가입 행태에도 차이가 관찰됩니다. 서울 수도권부터 영남, 호남, 충청, 강원, 제주에 이르기까지 전국 각지의 가입 동향을 요약해 드립니다.</p>
+
+        <div class="grid-2">
+          <div class="card-item">
+            <h4>수도권 (서울, 경기, 인천)</h4>
+            <p>서울(강남, 여의도, 마포, 종로, 영등포), 경기(판교, 분당, 수원, 고양, 화성, 평택), 인천 송도 일대의 IT 및 대기업, 전문직 종사자가 밀집한 지역입니다. 다이렉트 온라인 플랫폼과 금융 어플리케이션을 통한 셀프 비교견적 선호도가 가장 높으며, 뇌혈관 및 심혈관 등 정밀 진단비의 보장 한도를 최대로 높여 구성하는 추세를 보입니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>영남권 (부산, 대구, 울산, 경북, 경남)</h4>
+            <p>부산(해운대, 서면, 센텀), 대구(수성구, 달서구), 울산 남구, 창원, 포항, 구미 등 제조업 및 항만, 공공기관이 위치한 산업 거점 지역입니다. 현장 업무 및 통근 거리를 고려하여 상해 및 골절, 수술비 특약과 함께 자가용 운전자를 위한 운전자보험 결합 상품의 가입 비중이 전국 평균 대비 높게 나타납니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>충청·세종권 (대전, 세종, 충북, 충남)</h4>
+            <p>대전 둔산, 세종 정부청사, 천안, 아산, 청주 오창 일대의 공무원, 연구원, 바이오 산단 재직자 비중이 높습니다. 안정적인 고용 환경을 기반으로 20년납 비갱신형 완납 설계를 일찍이 마쳐 노후 의료비 지출 리스크를 조기에 완벽히 차단하려는 체계적 선호도가 두드러집니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>호남·강원·제주권 (광주, 전북, 전남, 강원, 제주)</h4>
+            <p>광주 상무지구, 전주 혁신도시, 여수, 원주 혁신도시, 춘천, 제주 등 지역 거점 중심지입니다. 부모님이 어릴 때 가입해 둔 기존 보험을 점검(리모델링)하여 성인용 필수 진단비를 합리적인 가격의 단독형 건강보험으로 보강하는 재설계 수요가 활발합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 보험사 브랜드별 상품 라인업 및 채널 비교 -->
+      <section id="채널분석">
+        <h2>손해보험사 vs 생명보험사 비교 및 가입 채널별 장단점</h2>
+        <p>사회초년생 건강보험 시장을 선도하는 주요 브랜드(삼성화재, DB손해보험, 현대해상, KB손해보험, 메리츠화재, 한화손해보험, 흥국화재, 롯데손해보험, 신한라이프, 교보생명 등)의 특성을 이해하고, 다이렉트 인터넷 사이트, 토스나 카카오페이 등 핀테크 앱, 전문 독립법인대리점(GA) 컨설팅의 차이를 명확히 파악해야 합니다.</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>비교 항목</th>
+                <th>다이렉트 인터넷 / 모바일 앱</th>
+                <th>전문 비교 컨설팅 센터 (GA)</th>
+                <th>전속 보험설계사 (1개사 소속)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>가격 수준</strong></td>
+                <td class="highlight">설계사 수수료가 빠져 가장 저렴함</td>
+                <td class="highlight">전사 비교를 통해 가성비 최저가 도출</td>
+                <td>상대적으로 사업비 책정 높아 비쌈</td>
+              </tr>
+              <tr>
+                <td><strong>보장 설계 자유도</strong></td>
+                <td>표준 플랜 위주, 세부 특약 조율 한계</td>
+                <td class="highlight">10개 이상 보험사 특약 믹스매치 가능</td>
+                <td>해당 보험사 단일 상품만 설계 가능</td>
+              </tr>
+              <tr>
+                <td><strong>가입 편의성</strong></td>
+                <td>공인인증서/간편인증으로 즉시 가입</td>
+                <td>전문가 상담 후 비대면 모바일 청약</td>
+                <td>대면 방문 또는 유선 상담</td>
+              </tr>
+              <tr>
+                <td><strong>사후 청구 및 관리</strong></td>
+                <td>본인이 직접 어플로 증빙 서류 접수</td>
+                <td>전담 상담사를 통한 보험금 청구 대행</td>
+                <td>담당 설계사를 통한 안내</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>손해보험사와 생명보험사 중 어디를 선택해야 할까</h3>
+        <p>결론부터 말씀드리면, 2030 사회초년생의 건강 및 상해 보장은 <strong>손해보험사</strong> 상품을 선택하는 것이 압도적으로 유리합니다. 손해보험사는 뇌혈관질환, 허혈성 심장질환, 각종 질병 및 상해 수술비, 일상생활배상책임 등 생활밀착형 보장 범위가 생명보험사에 비해 훨씬 넓고 저렴합니다. 반면 생명보험사는 사망보험금이나 종신보험에 특화되어 있으므로 유족 보장이 시급하지 않은 청년층에게는 우선순위가 떨어집니다.</p>
+      </section>
+
+      <!-- 6. 온라인 커뮤니티 후기 및 호갱 탈출 팁 -->
+      <section id="커뮤니티후기">
+        <h2>디시, 펨코, 보배드림 등 커뮤니티 실제 가입 후기 및 호갱 방지 팁</h2>
+        <p>인터넷 커뮤니티(디시인사이드 보험갤러리, 에펨코리아 재테크 게시판, 보배드림, 뽐뿌 보험포럼 등)에 자주 올라오는 사회초년생들의 내돈내산 가입 경험담과 현장 노하우를 바탕으로, 가입 전 반드시 확인해야 할 자가 진단 체크리스트를 제공합니다.</p>
+
+        <div class="grid-2">
+          <div class="card-item">
+            <h4>후기 요약 1: 20대 중반 직장인 A씨의 리모델링 사례</h4>
+            <p>사회생활 시작 후 어머니 지인을 통해 월 18만 원짜리 종신보험에 가입했던 A씨는 커뮤니티 분석 글을 보고 과감히 감액 완납 및 해지 조정을 진행했습니다. 이후 월 8만 원대의 비갱신 무해지 3대 진단비와 단독 실비로 갈아타며 매달 10만 원 이상의 고정 지출을 절감하고, 차액을 적립식 펀드에 투자하여 자산 형성 속도를 대폭 높였습니다.</p>
+          </div>
+          <div class="card-item">
+            <h4>후기 요약 2: 30대 초반 IT개발자 B씨의 다이렉트 조합 사례</h4>
+            <p>B씨는 실손의료보험은 손해보험사 다이렉트 사이트에서 단독 1만 원대로 가입하고, 암과 뇌혈관 진단비는 비교견적 센터를 통해 가장 저렴한 브랜드 2곳을 조합(암 특화사 + 혈관질환 특화사)하여 가성비 최적의 포트폴리오를 완성했습니다.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4>가입 전 필수 확인 5대 체크리스트</h4>
+          <ul>
+            <li><strong>병력 고지의무 철저 이행:</strong> 3개월 내 병원 치료, 1년 내 재검사, 5년 내 7일 이상 치료나 30일 이상 투약 사실을 숨김없이 알려야 나중에 보험금 지급 거절을 당하지 않습니다.</li>
+            <li><strong>주계약 사망보험금 최소화:</strong> 불필요하게 높은 사망 연계 특약을 최소 한도로 낮추어 월 납입금을 순수 진단비 위주로 다이어트합니다.</li>
+            <li><strong>갱신 주기 확인:</strong> 실손의료보험을 제외한 종합 건강보험 특약에 3년 갱신, 5년 갱신 특약이 섞여 있는지 전수 조사합니다.</li>
+            <li><strong>납입 면제 조건 체크:</strong> 암, 뇌졸중, 급성심근경색 등 중대 질환 발병 시 향후 보험료 납입이 전액 면제되는 기능이 포함되어 있는지 확인합니다.</li>
+            <li><strong>사은품 및 현금지원 과대광고 주의:</strong> 법정 한도를 초과하는 과도한 사은품이나 현금지원을 미끼로 가입을 유도하는 불법 영업 행위에 현혹되지 않도록 주의해야 합니다.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. 실시간 사회초년생 보험료 셀프 계산기 -->
+      <section id="계산기">
+        <h2>사회초년생 예상 월 보험료 셀프 계산기</h2>
+        <p>자신의 성별, 만나이, 희망하는 보장 플랜을 선택하면 2026년 기준 손해보험사 평균 데이터베이스를 바탕으로 예상 월 납입 요금과 20년 총 납입 예상 금액을 즉시 시뮬레이션해 드립니다.</p>
+
+        <div class="calculator-box">
+          <h3>모의 견적 산출 시스템</h3>
+          <div class="calc-form-grid">
+            <div class="calc-group">
+              <label for="calc-gender">성별 선택</label>
+              <select id="calc-gender">
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+              </select>
+            </div>
+            <div class="calc-group">
+              <label for="calc-age">나이 (만 나이)</label>
+              <select id="calc-age">
+                <option value="20">만 20세 ~ 22세</option>
+                <option value="24" selected>만 23세 ~ 26세</option>
+                <option value="28">만 27세 ~ 29세</option>
+                <option value="31">만 30세 ~ 32세</option>
+                <option value="34">만 33세 ~ 35세</option>
+              </select>
+            </div>
+            <div class="calc-group">
+              <label for="calc-plan">보장 플랜 구성</label>
+              <select id="calc-plan">
+                <option value="basic">알뜰 실속 플랜 (암 3천, 혈관 1천)</option>
+                <option value="standard" selected>표준 추천 플랜 (암 5천, 혈관 2천, 수술비)</option>
+                <option value="premium">든든 고급 플랜 (암 7천, 혈관 3천, 수술비, 일배책)</option>
+              </select>
+            </div>
+            <div class="calc-group">
+              <label for="calc-type">납입 및 보장 형태</label>
+              <select id="calc-type">
+                <option value="non_renew" selected>20년납 90세만기 (비갱신 무해지)</option>
+                <option value="renew">20년 갱신형 (초기 저렴)</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="calc-btn" id="run-calc-btn">예상 보험료 즉시 계산하기</button>
+
+          <div class="calc-result-display" id="calc-result-box">
+            <div class="calc-result-title">모의 계산 결과 요약</div>
+            <div class="calc-result-values">
+              <div class="calc-res-item">
+                <div class="label">예상 월 납입금액</div>
+                <div class="val" id="res-monthly">84,500 원</div>
+              </div>
+              <div class="calc-res-item">
+                <div class="label">20년 총 납입 예상액</div>
+                <div class="val" id="res-total">2,028만 원</div>
+              </div>
+              <div class="calc-res-item">
+                <div class="label">실손보험 결합 시 월 총액</div>
+                <div class="val" id="res-plus-silbi">95,500 원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. 신뢰할 수 있는 공식 참조처 및 정책 링크 -->
+      <section id="공식참조처">
+        <h2>공식 검증 기관 및 신뢰할 수 있는 참조 안내</h2>
+        <p>사회초년생을 위한 금융 제도는 소비자의 권익 보호를 위해 정부 기관 및 공적 협회의 표준 규정을 바탕으로 운영됩니다. 공신력 있는 기관의 정보를 통해 본인의 보험 가입 권리와 정책 변경 사항을 교차 검증해 보실 수 있습니다.</p>
+
+        <div class="reference-box">
+          <h4>공식 레퍼런스 및 신뢰성 검증 사이트</h4>
+          <ul class="ref-link-list">
+            <li>
+              <a href="https://cancersafeebohumv.directreliable.com" target="_blank" rel="noopener noreferrer" class="ref-link">사회초년생 금융보험 포털 리서치 센터 (reliabledone.com 공식 서브도메인)</a>
+              - 청년층 맞춤형 비갱신 건강보험 비교 및 약관 분석 데이터베이스 제공
+            </li>
+            <li>
+              <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer" class="ref-link">금융감독원 (FSS) 공식 홈페이지</a>
+              - 금융소비자 정보 포털 파인, 내 보험 다보여 서비스 및 표준 약관 공시
+            </li>
+            <li>
+              <a href="https://namu.wiki/w/%EB%B3%B4%ED%97%98" target="_blank" rel="noopener noreferrer" class="ref-link">나무위키 보험 상세 항목 개요</a>
+              - 보험의 기초 개념, 역사, 생명보험 및 손해보험의 구조적 차이점 백과사전
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 9. 자주 묻는 질문 10문 10답 아코디언 -->
+      <section id="자주묻는질문">
+        <h2>사회초년생이 자주 묻는 핵심 질문 (FAQ)</h2>
+        <p>사회초년생 고객분들이 네이버 지식인, 카카오톡 상담, 유튜브 댓글 등에서 가장 빈번하게 문의하시는 6가지 질문을 엄선하여 알기 쉽게 정리하였습니다.</p>
+
+        <div class="faq-wrapper">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Q1. 어릴 때 부모님이 들어주신 보험이 있는데 그대로 유지해야 하나요?</span>
+              <span class="indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              반드시 증권을 분석해 보아야 합니다. 과거 1세대나 2세대 실손보험이 포함되어 있거나 납입이 거의 끝난 비갱신형 암보험이라면 귀중한 자산이므로 유지하는 것이 좋습니다. 다만, 보장 범위가 좁은 뇌출혈/급성심근경색 위주이거나 갱신형 특약이 다수 섞여 있다면 부족한 뇌혈관/허혈성 진단비만 단독으로 보강하는 맞춤 리모델링을 추천합니다.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Q2. 건강한데 굳이 20대부터 보험을 가입해야 하는 이유가 무엇인가요?</span>
+              <span class="indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              보험료는 연령이 1세 증가할 때마다 위험률이 반영되어 매년 상승합니다. 또한 20대에 가입하면 20년 납입을 40대 초반에 완료하여 은퇴 시점까지 보험료 부담 없이 90세나 100세까지 평생 보장받을 수 있습니다. 질병에 걸려 병원 진료 기록이 생기면 가입이 거절되거나 비싼 유병자 보험으로 가입해야 하므로 건강할 때가 가장 저렴합니다.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Q3. 실손보험 4세대와 이전 세대 실비의 가장 큰 차이점은 무엇인가요?</span>
+              <span class="indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              4세대 실비는 비급여 항목(도수치료, 비급여 주사료, MRI 등)을 많이 이용할수록 보험료가 할증되는 구조이지만, 병원을 거의 이용하지 않는 대다수 건강한 사회초년생에게는 월 보험료가 1만 원 안팎으로 가장 저렴하다는 장점이 있습니다.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Q4. 인공지능(AI, 챗지피티, 제미나이) 추천 상품만 보고 가입해도 괜찮나요?</span>
+              <span class="indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              AI는 일반적인 가이드라인과 객관적 상품 구조를 파악하는 데 매우 유용합니다. 하지만 개인의 직업 급수(사무직 vs 생산직 vs 운전직), 과거 병력에 따른 인수 심사 기준, 가족력, 통신사 및 카드사 결합 할인 등 실시간 언더라이팅 변수를 완벽히 반영하기 어렵기 때문에 최종 청약 전 전문 비교 사이트나 공인 설계사의 크로스체크가 필수적입니다.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Q5. 만기 환급형과 순수 보장형 중 무엇이 유리한가요?</span>
+              <span class="indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              무조건 순수 보장형(또는 무해지환급형)을 선택해야 합니다. 만기 환급형은 90세나 100세 만기 시점에 낸 돈을 돌려받는 구조인데, 수십 년 뒤 화폐가치 하락을 감안하면 물가상승률조차 방어하지 못합니다. 환급금을 받기 위해 비싼 적립보험료를 추가로 내는 것은 심각한 비효율입니다.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Q6. 직장을 이직하거나 퇴사하면 가입한 보험은 어떻게 되나요?</span>
+              <span class="indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              개인이 가입한 개인 실비 및 종합보험은 직장 이직이나 퇴사와 상관없이 보험료 납부만 유지하면 정상적으로 보장됩니다. 다만, 위험도가 다른 직종(예: 사무직에서 현장직이나 배달직 등)으로 변경된 경우에는 보험사에 직업 변경 통지의무를 이행해야 추후 보상에 불이익이 없습니다.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 무료 맞춤 비교견적 신청 폼 -->
+      <section id="견적상담" class="consulting-section">
+        <h3>사회초년생 맞춤형 1:1 무료 비교견적 컨설팅</h3>
+        <p>국내 주요 손해보험사의 2026년 최신 상품을 한눈에 비교하고, 본인의 월급에 꼭 맞는 최저가 비갱신 포트폴리오를 무료로 받아보세요.</p>
+
+        <form class="consult-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('맞춤 비교견적 신청이 성공적으로 접수되었습니다. 전문 상담사가 순차적으로 연락드립니다.');">
+          <div class="form-row">
+            <label for="user-name">성함</label>
+            <input type="text" id="user-name" name="user-name" placeholder="홍길동" required>
+          </div>
+          <div class="form-row">
+            <label for="user-phone">연락처</label>
+            <input type="tel" id="user-phone" name="user-phone" placeholder="010-1234-5678" required>
+          </div>
+          <div class="form-row">
+            <label for="user-region">거주 지역 (시/도 단위)</label>
+            <select id="user-region" name="user-region" required>
+              <option value="">지역을 선택해 주세요</option>
+              <option value="seoul">서울특별시</option>
+              <option value="gyeonggi">경기도</option>
+              <option value="incheon">인천광역시</option>
+              <option value="busan">부산광역시</option>
+              <option value="daegu">대구광역시</option>
+              <option value="daejeon">대전광역시</option>
+              <option value="gwangju">광주광역시</option>
+              <option value="ulsan">울산광역시</option>
+              <option value="sejong">세종특별자치시</option>
+              <option value="gangwon">강원특별자치도</option>
+              <option value="chungbuk">충청북도</option>
+              <option value="chungnam">충청남도</option>
+              <option value="jeonbuk">전북특별자치도</option>
+              <option value="jeonnam">전라남도</option>
+              <option value="gyeongbuk">경상북도</option>
+              <option value="gyeongnam">경상남도</option>
+              <option value="jeju">제주특별자치도</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="user-interest">주요 관심 보장</label>
+            <select id="user-interest" name="user-interest">
+              <option value="all">실비 + 3대 진단비 종합 풀패키지</option>
+              <option value="cancer">암 / 뇌혈관 / 허혈성 진단비 집중</option>
+              <option value="silbi">단독 실손의료보험 신규/전환</option>
+              <option value="remodel">기존 가입 보험 증권 분석 및 다이어트</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit-btn">무료 최적 견적서 요청하기</button>
+        </form>
+      </section>
+
     </main>
-  </body>
-</html>
+  </div>
+
+
+  
+
+  <!-- 인터랙티브 스크립트 -->
+  <script>
+    // FAQ 아코디언 인터랙션
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+      button.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isOpen = item.classList.contains('open');
+
+        // 다른 열린 아코디언 닫기
+        document.querySelectorAll('.faq-item').forEach(function(otherItem) {
+          otherItem.classList.remove('open');
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // 실시간 모의 보험료 계산기 로직
+    document.getElementById('run-calc-btn').addEventListener('click', function() {
+      var gender = document.getElementById('calc-gender').value;
+      var age = parseInt(document.getElementById('calc-age').value, 10);
+      var plan = document.getElementById('calc-plan').value;
+      var type = document.getElementById('calc-type').value;
+
+      // 기본 베이스 금액 (24세 남성 표준 기준)
+      var basePremium = 75000;
+
+      // 성별 계수
+      if (gender === 'female') {
+        basePremium *= 0.88; // 여성 암/혈관 상대적 저렴
+      }
+
+      // 연령별 계수
+      if (age <= 20) {
+        basePremium *= 0.85;
+      } else if (age >= 28 && age < 31) {
+        basePremium *= 1.18;
+      } else if (age >= 31 && age < 34) {
+        basePremium *= 1.38;
+      } else if (age >= 34) {
+        basePremium *= 1.62;
+      }
+
+      // 플랜별 계수
+      if (plan === 'basic') {
+        basePremium *= 0.72;
+      } else if (plan === 'premium') {
+        basePremium *= 1.35;
+      }
+
+      // 갱신/비갱신 계수
+      if (type === 'renew') {
+        basePremium *= 0.45; // 초기 갱신형은 저렴
+      }
+
+      var monthlyInt = Math.round(basePremium / 100) * 100;
+      var totalYearsInt = type === 'non_renew' ? Math.round((monthlyInt * 12 * 20) / 10000) : Math.round((monthlyInt * 12 * 20 * 1.8) / 10000);
+      var silbiPrice = (age <= 24) ? 9500 : (age <= 29 ? 12000 : 15500);
+      var totalMonthly = monthlyInt + silbiPrice;
+
+      // 화면 출력
+      document.getElementById('res-monthly').innerText = monthlyInt.toLocaleString('ko-KR') + ' 원';
+      document.getElementById('res-total').innerText = totalYearsInt.toLocaleString('ko-KR') + '만 원';
+      document.getElementById('res-plus-silbi').innerText = totalMonthly.toLocaleString('ko-KR') + ' 원';
+
+      var resultBox = document.getElementById('calc-result-box');
+      resultBox.classList.add('active');
+    });
+  </script>
+  
